@@ -1,0 +1,65 @@
+Collecting txtai
+  Using cached txtai-6.2.0-py3-none-any.whl.metadata (22 kB)
+Collecting faiss-cpu>=1.7.1.post2 (from txtai)
+  Using cached faiss-cpu-1.7.4.tar.gz (57 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+INFO: pip is looking at multiple versions of txtai to determine which version is compatible with other requirements. This could take a while.
+Collecting txtai
+  Using cached txtai-6.1.0-py3-none-any.whl.metadata (23 kB)
+  Using cached txtai-6.0.0-py3-none-any.whl.metadata (24 kB)
+  Using cached txtai-5.5.1-py3-none-any.whl (169 kB)
+Requirement already satisfied: numpy>=1.18.4 in ./text_sum/lib/python3.12/site-packages (from txtai) (1.26.2)
+Collecting pyyaml>=5.3 (from txtai)
+  Using cached PyYAML-6.0.1-cp312-cp312-macosx_11_0_arm64.whl.metadata (2.1 kB)
+Collecting txtai
+  Using cached txtai-5.5.0-py3-none-any.whl (169 kB)
+  Using cached txtai-5.4.0-py3-none-any.whl (166 kB)
+  Using cached txtai-5.3.0-py3-none-any.whl (159 kB)
+  Using cached txtai-5.2.0-py3-none-any.whl (154 kB)
+INFO: pip is still looking at multiple versions of txtai to determine which version is compatible with other requirements. This could take a while.
+  Using cached txtai-5.1.0-py3-none-any.whl (147 kB)
+  Using cached txtai-5.0.0-py3-none-any.whl (147 kB)
+  Using cached txtai-4.6.0-py3-none-any.whl (135 kB)
+  Using cached txtai-4.5.0-py3-none-any.whl (134 kB)
+  Using cached txtai-4.4.0-py3-none-any.whl (134 kB)
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+  Using cached txtai-4.3.1-py3-none-any.whl (127 kB)
+  Using cached txtai-4.3.0-py3-none-any.whl (127 kB)
+  Using cached txtai-4.2.1-py3-none-any.whl (124 kB)
+  Using cached txtai-4.2.0-py3-none-any.whl (124 kB)
+  Using cached txtai-4.1.0-py3-none-any.whl (122 kB)
+  Using cached txtai-4.0.0-py3-none-any.whl (118 kB)
+  Using cached txtai-3.7.0-py3-none-any.whl (87 kB)
+  Using cached txtai-3.6.0-py3-none-any.whl (80 kB)
+  Using cached txtai-3.5.0-py3-none-any.whl (77 kB)
+  Using cached txtai-3.4.0-py3-none-any.whl (76 kB)
+  Using cached txtai-3.3.0-py3-none-any.whl (75 kB)
+  Using cached txtai-3.2.0-py3-none-any.whl (68 kB)
+  Using cached txtai-3.1.0-py3-none-any.whl (61 kB)
+Collecting aiohttp>=3.7.4 (from txtai)
+  Using cached aiohttp-3.9.0-cp312-cp312-macosx_11_0_arm64.whl.metadata (7.4 kB)
+Collecting annoy>=1.16.3 (from txtai)
+  Using cached annoy-1.17.3.tar.gz (647 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting apache-libcloud>=3.3.1 (from txtai)
+  Using cached apache_libcloud-3.8.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting fastapi>=0.61.1 (from txtai)
+  Using cached fastapi-0.104.1-py3-none-any.whl.metadata (24 kB)
+Collecting fasttext>=0.9.2 (from txtai)
+  Using cached fasttext-0.9.2.tar.gz (68 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
