@@ -1,14 +1,12 @@
 import streamlit as st
-from txtai.pipeline import Summary, Textractor
 from PyPDF2 import PdfReader
-import warnings
-warnings.filterwarnings("ignore")
+from transformers import pipeline
 
 st.set_page_config(layout="wide")
 
 @st.cache_resource
 def text_summary(text, maxlength=None):
-    summary = Summary()
+    summary = pipeline("summarization")
     text = (text)
     result = summary(text)
     return result
@@ -36,6 +34,7 @@ if choice == "Summarize Text":
                     else:
                         st.markdown("**Summary Result**")
                         result = text_summary(input_text)
+                        result=str(result)[19:-3]
                         st.success(result)
 
     if(len(input_text)>0):
@@ -54,6 +53,7 @@ elif choice == "Summarize Document":
             st.markdown("**Your Summary here**")
             text = extract_text_from_pdf("doc_file.pdf")
             doc_summary = text_summary(text)
+            doc_summary=str(doc_summary)[19:-3]
             st.success(doc_summary)
             with st.expander("See extracted text"):
                 extracted_text = extract_text_from_pdf("doc_file.pdf")
