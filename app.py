@@ -1,6 +1,8 @@
 import streamlit as st
 from txtai.pipeline import Summary, Textractor
 from PyPDF2 import PdfReader
+import warnings
+warnings.filterwarnings("ignore")
 
 st.set_page_config(layout="wide")
 
