@@ -46,10 +46,10 @@ elif choice == "Summarize Document":
     st.subheader("Summarize Document")
     input_file = st.file_uploader("Upload your document here", type=['pdf'])
     if input_file is not None:
+        st.info("File uploaded successfully")
         if st.button("Summarize Document"):
             with open("doc_file.pdf", "wb") as f:
                 f.write(input_file.getbuffer())
-                st.info("File uploaded successfully")
             st.markdown("**Your Summary here**")
             text = extract_text_from_pdf("doc_file.pdf")
             doc_summary = text_summary(text)
