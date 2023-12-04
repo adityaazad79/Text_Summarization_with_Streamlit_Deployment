@@ -1,20 +1,20 @@
 import streamlit as st
 # create interactive web applications with Python.
+from txtai.pipeline import Summary, Textractor
+# perform text summarization using a pre-trained model.
 from PyPDF2 import PdfReader
 # extract text from PDF files.
-from transformers import pipeline
-# perform text summarization using a pre-trained model.
+import warnings
+warnings.filterwarnings("ignore")
 
 st.set_page_config(layout="wide")
 # Sets the layout of the page to be wide.
 
 @st.cache_resource
-# a decorator used for caching the resource, which helps improve the performance
-# by avoiding redundant computations.
-def text_summary(text, maxlength=None):
 # function uses the Hugging Face Transformers library's pre-trained summarization
 # model to generate a summary of the input text.
-    summary = pipeline("summarization")
+def text_summary(text, maxlength=None):
+    summary = Summary()
     text = (text)
     result = summary(text)
     return result
@@ -41,7 +41,6 @@ if choice == "Summarize Text":
         #  Provides a text area for the user to input the text.
         if input_text is not None:
             if st.button("Summarize Text"):
-                # Checks if the "Summarize Text" button is clicked.
                 with col2:
                     if(len(input_text)<=0):
                         # it checks if the input text is not empty, and if not, it generates
@@ -50,7 +49,6 @@ if choice == "Summarize Text":
                     else:
                         st.markdown("**Summary Result**")
                         result = text_summary(input_text)
-                        result=str(result)[19:-3]
                         st.success(result)
 
     if(len(input_text)>0):
@@ -64,18 +62,17 @@ elif choice == "Summarize Document":
     input_file = st.file_uploader("Upload your document here", type=['pdf'])
     # Provides a file uploader for the user to upload a PDF document.
     if input_file is not None:
-        st.info("File uploaded successfully")
         if st.button("Summarize Document"):
         # If a file is uploaded and the "Summarize Document" button is clicked:
             with open("doc_file.pdf", "wb") as f:
                 # It saves the uploaded file as "doc_file.pdf".
                 f.write(input_file.getbuffer())
+                st.info("File uploaded successfully")
             st.markdown("**Your Summary here**")
             text = extract_text_from_pdf("doc_file.pdf")
             # Extracts text from the PDF file using `extract_text_from_pdf`.
             doc_summary = text_summary(text)
             # Generates a summary using `text_summary`.
-            doc_summary=str(doc_summary)[19:-3]
             st.success(doc_summary)
             with st.expander("See extracted text"):
                 # Displays the document summary and the extracted text in an expander if the user clicks to expand.
